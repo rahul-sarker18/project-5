@@ -5,15 +5,15 @@ function displayProduct(){
     const cartContainer = document.getElementById("products-cart");
     cartContainer.textContent = '';
 
-    for(let i =0; i < cart.length; i++){
-
+    for(let i =0; i <5; i++){
+        cart.length[i];
         const tr = document.createElement("tr");
 
             tr.innerHTML = `
             <th>${i+1}</th>
             <td>${cart[i].pdName}</td>
             `;
-
+            
         cartContainer.appendChild(tr);
     }
 }
