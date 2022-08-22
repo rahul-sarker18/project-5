@@ -8,8 +8,7 @@ function displayProduct(){
     for(let i =0; i < cart.length; i++){
 
         const tr = document.createElement("tr");
-       
-       
+
             tr.innerHTML = `
             <th>${i+1}</th>
             <td>${cart[i].pdName}</td>
@@ -41,11 +40,9 @@ function calclutar(){
     const parPlayertring = parPlayer.value;
     const parPlayerNumber = parseInt(parPlayertring);
 
-    // td.textContent ='';
-    // const td = tr.children[0].length.innerText;
-    // const tdnumber =parseInt(td);
+    console.log(cart.length)
 
-    const allPlayer = parPlayerNumber * 5;
+    const allPlayer = parPlayerNumber * cart.length;
 
     // console.log(allPlayer)
 
@@ -54,7 +51,7 @@ function calclutar(){
     
     playerCosd.innerText =allPlayer;
 
-
+  return allPlayer;
 
 }
 
@@ -62,21 +59,20 @@ function calclutar(){
 // calclutar total 
 
 function calclutarTotals(){
-    const ManagerInput = document.getElementById('ManagerInput');
-    const Managerstring = ManagerInput.value;
-    const Manager = parseInt(Managerstring);
+    const managerInput = document.getElementById('ManagerInput').value;
+    const manager = parseInt(managerInput);
 
-    const coachInput =document.getElementById('coach-input');
-    const coachString = coachInput.value;
-    const coach = parseInt(coachString);
+    const coachInput =document.getElementById('coach-input').value;
+    const coach = parseInt(coachInput);
 
-    const total= Manager + coach;
-
+    const total= manager + coach + calclutar();
+   
     const totalElemant =document.getElementById('total-elemant')
     const totalInner = totalElemant.innerText;
 
-    totalElemant.innerText =total;
+    totalElemant.innerText = total;
 
+    console.log(total);
 
-    console.log(total)
+    calclutar();
 }
