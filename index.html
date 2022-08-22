@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header>
+    <header class="mb-12">
         <div class="bg-[url('./img/psg-baner.jpg')] h-96">
             <div class="w-2/4 mx-auto py-12 text-center">
                 <h1 class="text-6xl my-6 pt-12 font-bold text-rose-400">Paris Saint-Germain F.C.</h1>
@@ -23,7 +23,7 @@
 
     <!-- main section stard -->
 
-    <main class="w-9/12 mx-auto mt-5 pb-20">
+    <main class="w-9/12 mx-auto mt-12 pt-12">
         <div class="grid grid-cols-0 gap-4 divide-x">
             <div class="grid grid-cols-4 gap-4">
                 <!-- product 1 -->
@@ -89,7 +89,7 @@
 <!-- chat box 1 -->
 
                 <!-- product 4 -->
-                    <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <div id="div5" class="card card-compact w-full bg-base-100 shadow-xl">
                         <figure><img src="./img/naymar.jpg" alt="Shoes" class="w-full h-40"/></figure>
                         <div class="card-body">
                             <h2 class="text-center">Neymar Jr </h2>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 <!-- product 5 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                <div id="div5" class="card card-compact w-full bg-base-100 shadow-xl">
                     <figure><img src="./img/Kylian.jpg" alt="Shoes" class="w-full h-40"/></figure>
                     <div class="card-body">
                         <h2 class="text-center">Kylian Mbappé </h2>
@@ -114,7 +114,7 @@
                 </div>
                 
                 <!-- product 6 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                <div id="div5" class="card card-compact w-full bg-base-100 shadow-xl">
                     <figure><img src="./img/Renato-Sanches.jpg" alt="Shoes" class="w-full h-40"/></figure>
                     <div class="card-body">
                         <h2 class="text-center">Kylian Mbappé </h2>
@@ -132,48 +132,43 @@
             <div class="bg-neutral-400 p-2 ">
                 <h1 class="text-black text-2xl font-bold text-center py-3">Budget</h1>
                 <!-- calcluten 1 -->
-                <div class="gap-4 flex ">
-                    <h1 class="text-1xl text-black font-bold  ">Per Player ::</h1>
-                    <input type="number" name="" id="" class="w-2/4 text-rose-800  ">
-                </div>
-                <div class="w-fit  px-7 py-6">
-                    <button id="calclutar"  class="btn btn-primary px-12">Calculate</button>
-                </div>
-
-                <div class="flex gap-4 ">
-                    <h1 class="text-1xl text-black font-bold">Player Expenses ::</h1>
-                    <p class="text-1xl text-black font-bold" >000000</p>
+                <div>
+                    <div class="gap-4 flex ">
+                        <h1 class="text-1xl text-black font-bold  ">Per Player ::</h1>
+                        <input type="number" name="" id="par-player" class="w-2/4 text-rose-800  " placeholder="Per Player">
+                    </div>
+                    <div class="w-fit  px-7 py-6">
+                        <button id="calclutar" onclick="calclutar()"  class="btn btn-primary px-12">Calculate</button>
+                    </div>
+    
+                    <div class="flex gap-4 ">
+                        <h1 class="text-1xl text-black font-bold">Player Expenses ::</h1>
+                        <p class="text-1xl text-black font-bold " >$<span id="player-cosd" class="text-1xl  text-orange-800 z-index-10">0</span></p>
+                    </div>
                 </div>
 
              <!-- calcluten 2 -->
 
+               <div>
                 <div class="gap-4 flex  my-5">
                     <h1 class="text-1xl text-black font-bold  ">Per Player ::</h1>
                     <input type="number" name="" id="" class="w-2/4 text-rose-800  ">
                 </div>
 
-                <div class="gap-4 flex  my-5">
+                <div id="coach-div" class="gap-4 flex  my-5">
                     <h1 class="text-1xl text-black font-bold  ">Coach ::</h1>
-                    <input type="number" name="" id="" class="w-2/4 text-rose-800  ">
+                    <input type="number" name="" id="" class="w-2/4 text-rose-800 mx-6">
                 </div>
 
                 <div class="w-fit  px-3 py-4">
-                    <button id="calclutar"  class="btn btn-primary px-12">Calculate Total</button>
+                    <button id="calclutar" onclick=" calclutarTotal()"  class="btn btn-primary px-12">Calculate Total</button>
                 </div>
                
                 <div class="flex gap-4 ">
                     <h1 class="text-1xl text-black font-bold">Player Expenses ::</h1>
                     <p class="text-1xl text-black font-bold" >000000</p>
                 </div>
-
-
-
-
-
-
-
-
-
+               </div>
 
             </div>
 
