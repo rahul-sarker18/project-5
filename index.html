@@ -151,22 +151,22 @@
 
                <div>
                 <div class="gap-4 flex  my-5">
-                    <h1 class="text-1xl text-black font-bold  ">Per Player ::</h1>
-                    <input type="number" name="" id="" class="w-2/4 text-rose-800  ">
+                    <h1 class="text-1xl text-black font-bold  ">Manager ::</h1>
+                    <input type="number" name="" id="ManagerInput" class="w-2/4 text-rose-800  ">
                 </div>
 
                 <div id="coach-div" class="gap-4 flex  my-5">
                     <h1 class="text-1xl text-black font-bold  ">Coach ::</h1>
-                    <input type="number" name="" id="" class="w-2/4 text-rose-800 mx-6">
+                    <input type="number" name="" id="coach-input" class="w-2/4 text-rose-800 mx-6">
                 </div>
 
                 <div class="w-fit  px-3 py-4">
-                    <button id="calclutar" onclick=" calclutarTotal()"  class="btn btn-primary px-12">Calculate Total</button>
+                    <button id="calclutar" onclick=" calclutarTotals()"  class="btn btn-primary px-12">Calculate Total</button>
                 </div>
                
                 <div class="flex gap-4 ">
                     <h1 class="text-1xl text-black font-bold">Player Expenses ::</h1>
-                    <p class="text-1xl text-black font-bold" >000000</p>
+                    <p class="text-1xl text-black font-bold" >$ <span id="total-elemant">000</span></p>
                 </div>
                </div>
 
@@ -175,6 +175,10 @@
             
         </div>
     </main>
+
+    <footer class=" py-20 mt-12 text-center border-t-2">
+        <p class="mx-auto block text-3xl">Copyright @ 2022 All Rights Reserved</p>
+    </footer>
 
 
 
