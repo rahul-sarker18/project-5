@@ -1,6 +1,5 @@
 const cart =[];
 
-
 function displayProduct(){
     const cartContainer = document.getElementById("products-cart");
     cartContainer.textContent = '';
@@ -13,15 +12,15 @@ function displayProduct(){
             <th>${i+1}</th>
             <td>${cart[i].pdName}</td>
             `;
-            
+
         cartContainer.appendChild(tr);
     }
 }
 
 function addToCart(element){
     const pdName = element.parentNode.parentNode.children[0].innerText;
-
-
+    element.disabled = true;
+  
     const pd ={
         pdName: pdName
     }
@@ -29,8 +28,8 @@ function addToCart(element){
     console.log(cart);
 
     displayProduct();
+   
 }
-
 
 
 // calclutar section stard 
@@ -55,9 +54,7 @@ function calclutar(){
 
 }
 
-
 // calclutar total 
-
 function calclutarTotals(){
     const managerInput = document.getElementById('ManagerInput').value;
     const manager = parseInt(managerInput);
